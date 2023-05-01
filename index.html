@@ -1,148 +1,65 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-
-  <title>Hartford Corridors</title>
-
-  <!-- jQuery -->
-  <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
-
-  <!-- Bootstrap -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
-
-  <link href="style.css" rel="stylesheet">
-
+<title>My professional webpage</title>
+	<style>
+		body {
+			background-color: #f2f2f2;
+			font-family: Arial, sans-serif;
+		}
+		h1 {
+			color: #333;
+			text-align: center;
+			margin-top: 50px;
+		}
+		p {
+			color: #666;
+			font-size: 18px;
+			line-height: 1.5;
+			margin: 20px 0;
+			text-align: justify;
+			padding: 0 20px;
+		}
+		.container {
+			max-width: 1000px;
+			margin: 0 auto;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			padding: 50px 20px;
+		}
+		.box {
+			background-color: #fff;
+			border-radius: 10px;
+			box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+			padding: 20px;
+			margin: 20px;
+			max-width: 400px;
+			text-align: center;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		iframe {
+			margin-top: 20px;
+			max-width: 100%;
+			height: 400px;
+			border: none;
+		}
+	</style>
 </head>
-
-<body id="page-top">
-
-  <!-- Navigation container begins here -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-secondary fixed-top" id="mainNav">
-    <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="https://datavizforall.org">DataVizForAll.org</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#section1">Introduction</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#section2">Crashes</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#section3">Corridor Injury</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <!-- Navigation container ends here -->
-
-  <header class="bg-secondary text-white">
-    <div class="container text-center">
-      <h1>Which Hartford Corridors Have the Most Crashes?</h1>
-      <p class="lead">by Isaac Frank and Chris Horkan</p>
-      <p class="lead">Last updated on April 18th, 2023</p>
-      <p class="lead">for Data Visualization for All</br>with Prof. Jack Dougherty</br>Trinity College, Hartford CT, USA</p>
-    </div>
-  </header>
-
-  <!-- Beginning of Section 1 -->
-  <section id="section1">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 mx-auto">
-          <h2>Introduction</h2>
-          <p class="lead"><b>Major and fatal car crashes occur frequently every day across the United States.</b></p>
-          
-          <p>To Trinity students, this issue is important on a personal level because just last spring a student died from reckless driving along a Hartford corridor.</p>
-          
-          <p>This type of danger should not be in the minds of Trinity students, or any one else in Hartford. This is why it is important to find the most dangerous Hartford corridors to eventually find solutions to remedy the danger they pose.</p>
-          
-          <p class="lead"><b>What is a <i>corridor</i></b>?</p>
-            
-            <p>Simply put, a corridor is street, road, or avenue. In order to quantify the danger found in Hartford corridors, we had to view databases that contain Hartford crash data. The most helpful one we found was 2018-2022 Hartford police report crash data from the <a href='https://www.ctcrash.uconn.edu/'>UCONN Crash Data Repository</a>. Our data and subsequent visualization and interpretation is based on crashes taking place on their respective road, and other associated data like conditions and injury type.
-              
-              <p>It is worth noting that we did not include any non-local corridors such as interstates in our data. This is because interstate issues are not something that the city of Hartford has a large influence in. The inclusion of interstates would likely skew our results as well.</p>
-
-       <!-- Beginning of Section 2 -->
-  <section id="section2">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 mx-auto">
-          <h2>Crashes on Hartford Corridors</h2>
-            <p class="lead"><b>So... which Hartford corridor has the most crashes?</b></p>
-              <p>It's Main street.</p>
-          
-          <p>As seen in Figure 1, Main Street in Hartford has the most crashes out of any street with 1,151.</p>
-
-         <iframe title="Total Crashes on Hartford Corridors" aria-label="Stacked Bars" id="datawrapper-chart-66ize" src="https://datawrapper.dwcdn.net/66ize/1/" scrolling="no" frameborder="0" style="border: none;" width="600" height="590" data-external="1"></iframe></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
-          </script>
-
-        <p><b>Figure 1</b>: <a href="https://www.datawrapper.de/_/66ize/">This chart</a> shows that Main Street has the highest number of crashes out of Hartford corridors with 1,151</p>
-          
-        <p class="lead"><b>But is Main street the most dangerous?</b></p>
-          
-          <p>To answer that question we need to put our data into context.</p>
-        <p>You might expect a street called <i>Main street</i> to be an important and long street. And in Hartford's case, you're right.<p> 
-        <p>In order to adjust for this, we must <i>normalize</i> the data by corridor length (in miles). By normalizing the data, we mean to take the data and “adjust raw counts into relative rates, such as percentages or per capita," but in this case relative to <b>length</b> (<a href='https://handsondataviz.org/normalize.html'>Hands-On Data Visualization, Chapter 5: Normalize the Data</a>).
-
-          
-          <p>As we build our model throughout this study, we must acknowledge that "It’s unrealistic to pretend that we can create a perfect model. But we can certainly come up with a <i>good enough one</i>" (<a href='https://www.google.com/books/edition/The_Truthful_Art/8dKKCwAAQBAJ'>Alberto Cairo, 2016</a>).</p>
-          
-          <p>Once we normalize our corridors for length, something is immediately apparent:</p>
-        <p> As shown in Figure 2, <b>Park Street</b> has the most crashes per mile.</p>
-          
-          <iframe title="Park St. Has Most Crashes Per Mile in Hartford" aria-label="Bar Chart" id="datawrapper-chart-AQ7R4" src="https://datawrapper.dwcdn.net/AQ7R4/1/" scrolling="no" frameborder="0" style="border: none;" width="600" height="590" data-external="1"></iframe>
-</iframe></iframe></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
-          </script>
-        
-<p><b>Figure 2</b>: <a href="https://www.datawrapper.de/_/AQ7R4/"> This chart</a> shows that Park Street has the highest number of crashes per mile with 368.</p>
-         
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End of Section 2 -->
-
-  <!-- Beginning of Section 3 -->
-  <section id="section3" class="bg-light">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 mx-auto">
-          <h2>Key Findings</h2>
-          <p class="lead">Main has the most crashes, but it is also the longest corridor...</p>
-          
-          <p>What we have done in this next section is called **"normalizing the data"**. Many don't know what this term means, and as The Hands-Ons Data Visualization so eloquently put it in Chatper 5 in the section titled, <a href="https://handsondataviz.org/normalize.html">Normalize Your Data</a>, "This means to adjust data that has been collected using different scales into a common reference scale, or in other words to convert raw data into rates to make more meaningful comparisons." What this means to us is that we want to adjust the number of crashes on a specified corridor with the length of that same corridor. The results of our normalization can be seen in Figures 3 and 4 below. </p>
-          
-          <p>As shown in Figure 3, the raw data shows Main St. looking like the most dangerous corridor due to it having by far the most crashes on Hartford corridors. But is this accurate?</p>
-          
-           <iframe title="Total Crashes on Hartford Corridors" aria-label="Bar Chart" id="datawrapper-chart-by3VM" src="https://datawrapper.dwcdn.net/by3VM/1/" scrolling="no" frameborder="0" style="border: none;" width="600" height="590" data-external="1"></iframe></iframe></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
-          </script>
-        
-        <p> Figure 3: <a href="https://www.datawrapper.de/_/by3VM/"> This chart</a> shows that Main St. has far and away the most crashes out of Hartford corridors.</p>
-          
-          <p>In order to compare corridors more accurately, we must put them on a level playing field.</p>
-          
-          <p> Within our data, we divided every corridor's number of crashes by its total length (in meters) and charted them, as shown in Figure 4.</p>
-          
-      <iframe title="Total Crashes on Hartford Corridors by Length of Corridor" aria-label="Bar Chart" id="datawrapper-chart-X94ga" src="https://datawrapper.dwcdn.net/X94ga/1/" scrolling="no" frameborder="0" style="border: none;" width="600" height="590" data-external="1"></iframe></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
-          </script>
-        
-        <p> Figure 4: <a href="https://www.datawrapper.de/_/X94ga/"> This chart</a> shows that other streets not presented as dangerous as Main St. have more crashes per meter.</p>
-          
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End of Section 3-->
+<body>
+	<h1>Welcome to my professional webpage!</h1>
+	<div class="container">
+		<div class="box">
+			<h2>Colorful boxes</h2>
+			<p>Here is a colorful box with some text inside.</p>
+			<div style="background-color: #ff9900; color: #fff; padding: 10px;">Orange box</div>
+		</div>
+		<div class="box">
+			<h2>Embedded video</h2>
+			<p>Here is an embedded video from YouTube.</p>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+		</div>
+		<div class="box">
+			<h2>Embedded map</h2>
+			<p>Here is an embedded map from Google Maps.</p>
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d254038.62164113477!2d-0.241680289127573!3d51.5287718410883!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTHCsDI1JzIwLjUiTiAwwrAzNyc0Ny4zIlc!5e0!3m2!1sen!2sus!4v1653978181747!5m2!1sen!2sus" width="400" height="300" style="border:0;" allowfullscreen="" loading
